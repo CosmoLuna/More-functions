@@ -21,9 +21,19 @@ bool func(int num1, int num2, int num3) {
 	return false;
 }*/
 
-template <typename T_1, typename T_2> T_1 maxFunc(T_1 num1, T_2 num2) {
+/*template <typename T_1, typename T_2> T_1 maxFunc(T_1 num1, T_2 num2) {
 	return num1 > num2 ? num1 : num2;
+}*/
+
+
+// Задача 1 функция
+template <typename T> T mean(T array[], int length) {
+	T sum = 0;
+	for (int i = 0; i < length; i++)
+		sum += array[i];
+	return sum / length;
 }
+
 
 
 int main() {
@@ -39,9 +49,17 @@ int main() {
 	cout << func(5.5, 9.5) << endl;
 	cout << func(12, 5, 7);*/
 
-	cin >> n >> m;
+	/*cin >> n >> m;
 	cout << maxFunc(n, m) << endl;
-	cout << "Конец!";
+	cout << "Конец!";*/
+
+	// Задача 1
+	cout << "Изначальный массив:\n";
+	float z1[5] = { 5, 3, 8, 2, 5 };
+	for (int i = 0; i < 5; i++)
+		cout << z1[i] << " ";
+	cout << "\nСреднее арифметическое элементов массива = " << mean(z1, 5) << endl;
+
 
 
 	return 0;
